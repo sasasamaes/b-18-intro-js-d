@@ -22,11 +22,14 @@ document.write("Hola grupo b18")
 
 
 
-// var nombre = prompt("Cual es tu nombre?")
+// var nombreDePila = prompt("Cual es tu nombre?")
 
 // var apellido = prompt("Cual es tu apellido?")
 
-// console.log()
+// console.log(nombre)
+
+
+
 
 
 
