@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Arrays</title>
+</head>
+<body>
+    
+    <script>
+
+
+
+//While
+            var arr = [];
+            var userInput;
+            while(!(userInput == "") ) {
+                 userInput = prompt("ingrese cualquier caracter");
+                 arr.push(userInput); 
+                }
+                console.log(arr)
+
+      //  Do While
+
+        var index = 0
+        do {
+            debugger;
+            index++;
+            console.log('Counter' , index)
+        } while (index < 10);
+
+        For
+
+        var pokemonArr = ['Pikachu', 'Charizard', 'Volvazor']
+
+         //index = 0 , array.lenght = 3 , 0 + 1
+        for (var index = 0; index < pokemonArr.length; index++) {
+            console.log(pokemonArr[index]);   
+            
+        }
+
+        //Imprima los numeros de el 1 al 50
+      
+        for (let index = 1; index <= 50; index++) {
+           
+           // console.log(index)
+            
+        }
+
+        //Imprima de el siguiente array [4,”dos”,8,”tres”,5,9,1,”cero”] 
+        //los elementos que no sean tipo numero
+        var arrTotal = [4,"dos",8,"tres",5,9,1,"cero"];
+        var stringOnly = [];
+
+        for (let index = 0; index < arrTotal.length; index++) {
+
+            var value = typeof(arrTotal[index]);
+            if(value == 'string'){
+                stringOnly.push(arrTotal[index])
+            }
+           
+            
+        }
+        
+        //Que pida una palabra al usuario y muestre en consola cada una de las letras que componen 
+        //la palabra    tomate =t,o,m,a,t,e
+        do {
+            var input = prompt('Ingresa cualquier palabra');
+            var arr = input.split("");
+            if(!input == ""){
+                for (var index = 0; index < arr.length; index++) {
+               
+                    console.log(arr[index])
+               
+            } 
+            } 
+        } while (input == "");
+
+    </script>
+</body>
+</html>
