@@ -9,7 +9,6 @@
       var oracionesSinEspacio = [];
       var indice = 0;
 
-
       for(var i = 0; i < oracion.length; i++){
         if(oracion[i] == ' '){
           console.log("Espacio encontrado en la posicion: " + i);
