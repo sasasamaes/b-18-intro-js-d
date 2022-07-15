@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nodes</title>
+</head>
+
+<body>
+  <div id="div1">
+    <p id="p1">This is a paragraph.</p>
+    <p class="p2">This is another paragraph.</p>
+    <section>
+      <p>Texting</p>
+      <button class="btn" onclick="welcome()"></button>
+    </section>
+  </div>
+  <main id="content">
+    <h5 class="header">Main blog</h5>
+    <h5 class="header">Main blog</h5>
+  </main>
+  <script>
+
+
+    //***** JS Selectors **** // 
+    var getText = document.getElementById( 'p1' )
+    // console.log('using id',getText)
+    // //get element by tag name
+     var getSection = document.getElementsByTagName('section')
+    // console.log('using tag',getSection)
+    // //get element by class name
+     var getTextbyClass =  document.getElementsByClassName('p2')
+    // console.log('using class',getTextbyClass)
+
+    //Query Selectors
+    var getContent = document.querySelector( '.content' );
+    console.log( 'using query', getContent )
+    //Query Selector all
+    var getHeader = document.querySelectorAll( '.header' );
+    //console.log( 'using query-all', getHeader );
+    //***** JS Selectors **** // 
+
+
+    //*** Building new HTML elements with JS ***
+
+    //Creating Node objects and DOMStrings with append()
+    let newBlog = document.createElement( "div" );
+    let p = document.createElement( "p" );
+    let text =  document.createTextNode('hello world')
+     p.appendChild(text)
+
+    var element =  document.getElementById('content')
+    console.log('element', element)
+    element.appendChild (p);
+
+  
+    // element.appendChild(p)
+    // console.log('newBlog before append',newBlog)
+    // newBlog.append( p );  //<div> <p> hello world </p> </div>
+    // console.log('newBlog after append')
+
+   
+    //  getContent.append( newBlog ) //<main> <div> <p> hello world </p></div> </main>
+
+
+    //Creating just Node Objects with appendChild() --Note: **You can only create Node Objects**
+  
+    let div = document.createElement("div");
+    //Inserting a DOM Node
+    let p2 = document.createElement("p");
+    div.appendChild(p);
+  //  console.log(div) //
+
+    //Inserting a DOMString
+    //insert a DOMString
+  //  div.appendChild('Hello') //This results in an Uncaught TypeError: Failed to execute 'appendChild' on 'Node'
+
+
+     //*** Building new HTML elements with JS ***
+
+    //Welcome function
+
+    const sayHello = () => {
+      return alert( 'Welcome buddy!!' )
+    }
+
+
+
+  </script>
+</body>
+
+</html>
