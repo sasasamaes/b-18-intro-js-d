@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+        <script>
+            console.log('hello')
+            //create key-value pair
+            var user = [
+                {user: 'armin' ,password: '123'},
+                {user: 'dash' ,password: '123'},
+                {user: 'andrew' ,password: '123'},
+            ]
+                //Convert Array to JSON
+                var jsonUsers = JSON.stringify(user)
+               localStorage.setItem('all-users',jsonUsers  );
+           
+                //Login 
+                //get all user credentials
+                var allUsers = localStorage.getItem('all-users');
+               //Convert JSON to Array
+               var arrUsers =  JSON.parse(allUsers);
+               console.log(arrUsers);
+
+               //get the input data (user - password)
+               //Loop the session users and find the right user
+               
+               //Redirect page to the dashboard
+
+
+
+
+        </script>
+</body>
+</html>
